@@ -451,3 +451,305 @@ No. Java programs cannot run without JVM because JVM is responsible for executin
 
 ---
 
+
+# First Java Program – Hello World Explained
+
+The first program most people write when learning Java is the **Hello World program**.  
+This program simply prints a message on the screen.
+
+Example:
+
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+````
+
+Now let's understand **every part of this program step by step**.
+
+---
+
+# 1. `public class Hello`
+
+```
+public class Hello
+```
+
+This line defines a **class**.
+
+### What is a Class?
+
+A **class** is like a blueprint or template used to create objects in Java.
+Every Java program must be written inside a **class**.
+
+### Breaking it down
+
+#### `public`
+
+`public` is an **access modifier**.
+
+It means the class can be **accessed from anywhere**.
+
+In simple words:
+
+* `public` makes the class **visible to the JVM and other classes**.
+
+#### `class`
+
+`class` is a **keyword used to create a class in Java**.
+
+It tells the compiler that we are **defining a class**.
+
+#### `Hello`
+
+`Hello` is the **name of the class**.
+
+Important rule in Java:
+
+If the class is declared **public**, the **file name must be the same as the class name**.
+
+So the file must be named:
+
+```
+Hello.java
+```
+
+If the file name does not match the class name, the program will not compile.
+
+---
+
+# 2. `public static void main(String[] args)`
+
+```
+public static void main(String[] args)
+```
+
+This is the **main method**.
+
+The **main method is the starting point of every Java program**.
+When the program runs, the **JVM starts execution from this method**.
+
+Let's break this line into parts.
+
+---
+
+## `public`
+
+`public` means the method is **accessible from anywhere**.
+
+The JVM must be able to **access this method to start the program**.
+
+That is why the `main` method must always be **public**.
+
+---
+
+## `static`
+
+`static` means the method **belongs to the class, not to an object**.
+
+Because of this, the JVM can call the method **without creating an object of the class**.
+
+If `static` was not used, the JVM would first need to create an object before running the program.
+
+---
+
+## `void`
+
+`void` is the **return type**.
+
+It means the method **does not return any value**.
+
+The `main` method simply **runs the program**, so it does not return anything.
+
+---
+
+## `main`
+
+`main` is the **name of the method**.
+
+This is a **special method** because the JVM looks for this method to start program execution.
+
+If the method name is not `main`, the program will not run.
+
+---
+
+## `String[] args`
+
+```
+String[] args
+```
+
+This means **an array of strings**.
+
+It allows the program to receive **command line arguments** when the program starts.
+
+Example:
+
+```
+java Hello John
+```
+
+Here:
+
+```
+John
+```
+
+will be stored inside `args`.
+
+So:
+
+* `String[]` → an array of strings
+* `args` → variable name
+
+---
+
+# 3. Curly Braces `{ }`
+
+```
+{
+}
+```
+
+Curly braces define a **block of code**.
+
+They tell the compiler **where the class or method starts and ends**.
+
+Example:
+
+```
+class Hello {
+    // code inside class
+}
+```
+
+---
+
+# 4. `System.out.println("Hello World");`
+
+```
+System.out.println("Hello World");
+```
+
+This line prints text on the screen.
+
+Let's break it down.
+
+---
+
+## `System`
+
+`System` is a **built-in Java class** from the `java.lang` package.
+
+It provides access to system resources like:
+
+* input
+* output
+* memory
+
+---
+
+## `out`
+
+`out` is an **object of PrintStream** inside the System class.
+
+It represents the **standard output stream**, which usually means the **console (screen)**.
+
+---
+
+## `println`
+
+`println` is a **method used to print text on the screen**.
+
+`println` means:
+
+**print + new line**
+
+After printing the text, the cursor moves to the **next line**.
+
+Example output:
+
+```
+Hello World
+```
+
+---
+
+# Difference Between `print()` and `println()`
+
+## `print()`
+
+`print()` prints text but **does not move to the next line**.
+
+Example:
+
+```java
+System.out.print("Hello");
+System.out.print("World");
+```
+
+Output:
+
+```
+HelloWorld
+```
+
+---
+
+## `println()`
+
+`println()` prints text and **moves the cursor to the next line**.
+
+Example:
+
+```java
+System.out.println("Hello");
+System.out.println("World");
+```
+
+Output:
+
+```
+Hello
+World
+```
+
+---
+
+# 5. Semicolon `;`
+
+In Java, every statement must end with a **semicolon**.
+
+Example:
+
+```
+System.out.println("Hello World");
+```
+
+The semicolon tells the compiler **the statement has ended**.
+
+---
+
+# Program Execution Flow
+
+1. The programmer writes the code in a `.java` file.
+2. The Java compiler (`javac`) compiles the code.
+3. A `.class` bytecode file is created.
+4. The JVM runs the bytecode.
+5. The program output is displayed.
+
+---
+
+# Final Output
+
+When we run the program, the output will be:
+
+```
+Hello World
+```
+
+---
+
+
