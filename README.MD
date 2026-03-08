@@ -753,3 +753,422 @@ Hello World
 ---
 
 
+
+
+# **Java Data Types** 
+
+Java is a **statically typed language**.  
+This means every variable must have a **data type**, and the compiler checks it **before the program runs**.
+
+Example of invalid assignment:
+
+```java
+int x = "Hello"; // Compile-time error
+````
+
+Here `x` is an **integer**, but `"Hello"` is a **string**, so Java does not allow it.
+
+---
+
+# What is a Data Type?
+
+A **data type** tells Java:
+
+* what type of value a variable can store
+* how much memory is needed to store it
+
+Example:
+
+```java
+int age = 21;
+```
+
+Here:
+
+* `int` → data type
+* `age` → variable name
+* `21` → value
+
+---
+
+# Types of Data Types in Java
+
+Java has **two categories of data types**:
+
+1. **Primitive Data Types**
+2. **Non-Primitive (Reference) Data Types**
+
+---
+
+# 1. Primitive Data Types
+
+Primitive data types store **simple values directly in memory**.
+
+Java has **8 primitive data types**.
+
+| Data Type | Size          | Example |
+| --------- | ------------- | ------- |
+| boolean   | JVM dependent | true    |
+| byte      | 1 byte        | 10      |
+| short     | 2 bytes       | 2000    |
+| int       | 4 bytes       | 100     |
+| long      | 8 bytes       | 100000L |
+| float     | 4 bytes       | 3.14f   |
+| double    | 8 bytes       | 3.14159 |
+| char      | 2 bytes       | 'A'     |
+
+---
+
+# 1. boolean
+
+Used to store **true or false values**.
+
+Important rule:
+
+Java **does not allow 0 and 1** like C/C++.
+
+Example:
+
+```java
+public class BooleanExample {
+    public static void main(String[] args) {
+
+        boolean isJavaFun = true;
+        boolean isFishTasty = false;
+
+        System.out.println(isJavaFun);
+        System.out.println(isFishTasty);
+    }
+}
+```
+
+---
+
+# 2. byte
+
+`byte` is used to store **very small numbers**.
+
+Size:
+
+```
+1 byte (8 bits)
+```
+
+Range:
+
+```
+-128 to 127
+```
+
+Example:
+
+```java
+public class ByteExample {
+    public static void main(String[] args) {
+
+        byte age = 25;
+
+        System.out.println(age);
+    }
+}
+```
+
+---
+
+# 3. short
+
+Used for **slightly larger numbers than byte**.
+
+Size:
+
+```
+2 bytes
+```
+
+Example:
+
+```java
+public class ShortExample {
+    public static void main(String[] args) {
+
+        short students = 1000;
+
+        System.out.println(students);
+    }
+}
+```
+
+---
+
+# 4. int
+
+`int` is the **most commonly used integer data type in Java**.
+
+Size:
+
+```
+4 bytes
+```
+
+Example:
+
+```java
+public class IntExample {
+    public static void main(String[] args) {
+
+        int population = 2000000;
+
+        System.out.println(population);
+    }
+}
+```
+
+Most whole numbers in Java programs use **int**.
+
+---
+
+# 5. long
+
+Used when numbers are **too large for int**.
+
+Size:
+
+```
+8 bytes
+```
+
+Important rule:
+
+A long value usually ends with **L**.
+
+Example:
+
+```java
+public class LongExample {
+    public static void main(String[] args) {
+
+        long worldPopulation = 7800000000L;
+
+        System.out.println(worldPopulation);
+    }
+}
+```
+
+---
+
+# 6. float
+
+Used to store **decimal numbers**.
+
+Size:
+
+```
+4 bytes
+```
+
+Important rule:
+
+In Java, decimal numbers are **double by default**, so we must add **f** for float.
+
+Example:
+
+```java
+public class FloatExample {
+    public static void main(String[] args) {
+
+        float pi = 3.14f;
+
+        System.out.println(pi);
+    }
+}
+```
+
+---
+
+# 7. double
+
+Used for **large decimal numbers with higher precision**.
+
+Size:
+
+```
+8 bytes
+```
+
+Important fact:
+
+Decimal numbers in Java are **double by default**.
+
+Example:
+
+```java
+public class DoubleExample {
+    public static void main(String[] args) {
+
+        double pi = 3.14159;
+
+        System.out.println(pi);
+    }
+}
+```
+
+---
+
+# 8. char
+
+Used to store **a single character**.
+
+Size in Java:
+
+```
+2 bytes
+```
+
+Important difference:
+
+| Language | char size |
+| -------- | --------- |
+| C/C++    | 1 byte    |
+| Java     | 2 bytes   |
+
+Java uses **Unicode**, so characters take more memory.
+
+Example:
+
+```java
+public class CharExample {
+    public static void main(String[] args) {
+
+        char grade = 'A';
+
+        System.out.println(grade);
+    }
+}
+```
+
+Characters must use **single quotes `' '`**.
+
+---
+
+# 2. Non-Primitive (Reference) Data Types
+
+Non-primitive data types **store references (memory addresses)** instead of actual values.
+
+Examples:
+
+* String
+* Class
+* Object
+* Interface
+* Array
+
+---
+
+# String
+
+A **String** stores a sequence of characters.
+
+Example:
+
+```java
+public class StringExample {
+    public static void main(String[] args) {
+
+        String name = "John";
+
+        System.out.println(name);
+    }
+}
+```
+
+Important fact:
+
+Strings in Java are **immutable**, meaning they **cannot be changed after creation**.
+
+---
+
+# Array
+
+An **array** stores multiple values of the same type.
+
+Example:
+
+```java
+public class ArrayExample {
+    public static void main(String[] args) {
+
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        System.out.println(numbers[0]);
+    }
+}
+```
+
+Arrays start from **index 0**.
+
+---
+
+# Class and Object
+
+A **class** is a blueprint, and an **object** is an instance of that class.
+
+Example:
+
+```java
+class Car {
+
+    String model;
+    int year;
+
+    void display() {
+        System.out.println(model + " " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car myCar = new Car();
+        myCar.model = "Toyota";
+        myCar.year = 2020;
+
+        myCar.display();
+    }
+}
+```
+
+---
+
+# Quick Summary
+
+Primitive Data Types:
+
+* boolean
+* byte
+* short
+* int
+* long
+* float
+* double
+* char
+
+Non-Primitive Data Types:
+
+* String
+* Class
+* Object
+* Interface
+* Array
+
+Important things to remember:
+
+* `char` in Java = **2 bytes**
+* `boolean` = **true or false only**
+* decimal numbers are **double by default**
+* `float` requires **f**
+* `long` often requires **L**
+
+
+
+
+

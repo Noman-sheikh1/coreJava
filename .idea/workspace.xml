@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="adding how java work">
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="explaining first java program">
+      <change afterPath="$PROJECT_DIR$/src/dataType/BooleandatatypeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dataType/byteExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dataType/charExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +37,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BooleandatatypeExample.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.byteExample.executor": "Run",
+    "Application.charExample.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -81,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772953849876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="explaining first java program">
+      <option name="closed" value="true" />
+      <created>1772962421001</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772962421001</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,7 +104,8 @@
     <MESSAGE value="Core JAVA" />
     <MESSAGE value="History of java" />
     <MESSAGE value="adding how java work" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding how java work" />
+    <MESSAGE value="explaining first java program" />
+    <option name="LAST_COMMIT_MESSAGE" value="explaining first java program" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
