@@ -1470,5 +1470,345 @@ int x = 10;
 Here **10 is a literal**.
 
 
+# Type Conversion & Type Casting in Java
+
+When working with Java, you often need to **convert one data type into another**.  
+This process is called **Type Conversion** or **Type Casting**.
+
+---
+
+## First, Understand This Line 👇
+
+```java
+int x = 10;
+double y = x;
+```
+
+Here, Java converts `int` to `double`.
+
+👉 This is called **Type Conversion**.
+
+---
+
+## Why Do We Need Type Conversion?
+
+Because different data types store **different sizes and types of values**.
+
+Example:
+- `int` → whole numbers
+- `double` → decimal numbers
+
+Sometimes we need to:
+- store small data into bigger data
+- or forcefully convert bigger data into smaller data
+
+---
+
+## Types of Type Conversion in Java
+
+Java supports **two types**:
+
+| Type | Name |
+|----|----|
+| Automatic | Type Conversion (Widening) |
+| Manual | Type Casting (Narrowing) |
+
+---
+
+# 1️⃣ Type Conversion (Widening / Implicit)
+
+### What is Type Conversion?
+
+👉 **Automatically converting a smaller data type into a larger data type**  
+👉 Done by **Java itself**  
+👉 **No data loss**
+
+---
+
+### Widening Order (Important)
+
+```
+byte → short → int → long → float → double
+```
+
+---
+
+### Example 1
+
+```java
+int a = 10;
+double b = a;
+```
+
+Explanation:
+- `int` → smaller
+- `double` → larger
+- Java converts automatically
+
+✅ Safe  
+✅ No data loss
+
+---
+
+### Example 2
+
+```java
+public class TypeConversionExample {
+    public static void main(String[] args) {
+        int x = 20;
+        double y = x;
+
+        System.out.println(x);
+        System.out.println(y);
+    }
+}
+```
+
+Output:
+```
+20
+20.0
+```
+
+---
+
+### Example 3
+
+```java
+byte b = 10;
+int i = b;
+```
+
+✔ Allowed  
+✔ Automatic  
+✔ No casting needed
+
+---
+
+### Key Points of Type Conversion
+
+- Happens **automatically**
+- Converts **small → large**
+- **Safe**
+- No data loss
+- Also called **Implicit Conversion**
+
+---
+
+# 2️⃣ Type Casting (Narrowing / Explicit)
+
+### What is Type Casting?
+
+👉 **Manually converting a larger data type into a smaller data type**  
+👉 Done by **programmer**  
+👉 **Data loss may occur**
+
+---
+
+### Narrowing Order
+
+```
+double → float → long → int → short → byte
+```
+
+---
+
+### Example 1
+
+```java
+double x = 10.5;
+int y = (int) x;
+```
+
+Explanation:
+- `double` → larger
+- `int` → smaller
+- `(int)` is required
+
+Output:
+```
+10
+```
+
+❗ Decimal part is lost
+
+---
+
+### Example 2
+
+```java
+public class TypeCastingExample {
+    public static void main(String[] args) {
+        double price = 99.99;
+        int value = (int) price;
+
+        System.out.println(price);
+        System.out.println(value);
+    }
+}
+```
+
+Output:
+```
+99.99
+99
+```
+
+---
+
+### Example 3 (Data Loss)
+
+```java
+int a = 130;
+byte b = (byte) a;
+```
+
+Output:
+```
+-126
+```
+
+⚠ Because byte range is **-128 to 127**
+
+---
+
+### Key Points of Type Casting
+
+- Done **manually**
+- Converts **large → small**
+- **Risky**
+- Data loss possible
+- Also called **Explicit Casting**
+
+---
+
+# Difference Between Type Conversion & Type Casting
+
+| Feature | Type Conversion | Type Casting |
+|------|----------------|-------------|
+| Done by | Java | Programmer |
+| Direction | Small → Large | Large → Small |
+| Safety | Safe | Risky |
+| Data Loss | No | Yes |
+| Syntax | Automatic | `(type)` required |
+
+---
+
+# Very Important Interview Trick ⭐
+
+### This works ✅
+
+```java
+int a = 10;
+double b = a;
+```
+
+### This does NOT ❌
+
+```java
+double a = 10.5;
+int b = a;   // Error
+```
+
+### Correct Way ✔
+
+```java
+double a = 10.5;
+int b = (int) a;
+```
+
+---
+
+# Type Casting with char
+
+```java
+char ch = 'A';
+int ascii = ch;
+```
+
+Output:
+```
+65
+```
+
+Reverse:
+
+```java
+int num = 66;
+char ch = (char) num;
+```
+
+Output:
+```
+B
+```
+
+---
+
+# Complete Example Program
+
+```java
+public class TypeConversionCasting {
+
+    public static void main(String[] args) {
+
+        // Type Conversion
+        int a = 10;
+        double b = a;
+
+        // Type Casting
+        double x = 20.75;
+        int y = (int) x;
+
+        System.out.println(b);
+        System.out.println(y);
+    }
+}
+```
+
+---
+
+# Common Beginner Mistakes ❌
+
+❌ Forgetting casting:
+```java
+double d = 5.5;
+int i = d; // Error
+```
+
+✔ Correct:
+```java
+int i = (int) d;
+```
+
+---
+
+# Simple Way to Remember 🧠
+
+| Rule |
+|----|
+| Small → Big = Automatic |
+| Big → Small = Manual |
+
+---
+
+# One Line Definitions (Exam / Interview)
+
+**Type Conversion:**  
+Automatic conversion of smaller data type into larger data type.
+
+**Type Casting:**  
+Manual conversion of larger data type into smaller data type.
+
+---
+
+# Final Summary
+
+- Type Conversion = automatic, safe, widening
+- Type Casting = manual, risky, narrowing
+- Casting uses `(datatype)`
+- Data loss happens only in type casting.
+
+
 
 
