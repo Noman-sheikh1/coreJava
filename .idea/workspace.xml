@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="explaining first java program">
-      <change afterPath="$PROJECT_DIR$/src/dataType/BooleandatatypeExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dataType/byteExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dataType/charExample.java" afterDir="false" />
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="adding type conversion and type casting in java">
+      <change afterPath="$PROJECT_DIR$/src/Operator/Arithmatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operator/Assignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operator/BitwiseAndShift.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operator/Logical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operator/Relational.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operator/Unary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
@@ -37,8 +40,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Arithmatic.executor": "Run",
+    "Application.Assignment.executor": "Run",
+    "Application.BitwiseAndShift.executor": "Run",
     "Application.BooleandatatypeExample.executor": "Run",
+    "Application.IntegerLiteralExample.executor": "Run",
+    "Application.Logical.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Relational.executor": "Run",
+    "Application.Unary.executor": "Run",
     "Application.byteExample.executor": "Run",
     "Application.charExample.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -96,7 +106,31 @@
       <option name="project" value="LOCAL" />
       <updated>1772962421001</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding java data type">
+      <option name="closed" value="true" />
+      <created>1772989009104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772989009106</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adding java literal">
+      <option name="closed" value="true" />
+      <created>1772991338950</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772991338950</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adding type conversion and type casting in java">
+      <option name="closed" value="true" />
+      <created>1773069865824</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1773069865824</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -105,7 +139,10 @@
     <MESSAGE value="History of java" />
     <MESSAGE value="adding how java work" />
     <MESSAGE value="explaining first java program" />
-    <option name="LAST_COMMIT_MESSAGE" value="explaining first java program" />
+    <MESSAGE value="adding java data type" />
+    <MESSAGE value="adding java literal" />
+    <MESSAGE value="adding type conversion and type casting in java" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding type conversion and type casting in java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
