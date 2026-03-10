@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="adding type conversion and type casting in java">
-      <change afterPath="$PROJECT_DIR$/src/Operator/Arithmatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operator/Assignment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operator/BitwiseAndShift.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operator/Logical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operator/Relational.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operator/Unary.java" afterDir="false" />
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="operator in java">
+      <change afterPath="$PROJECT_DIR$/src/Conditional_Statement/if_else.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
@@ -130,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773069865824</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="operator in java">
+      <option name="closed" value="true" />
+      <created>1773154851581</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773154851581</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,7 +145,8 @@
     <MESSAGE value="adding java data type" />
     <MESSAGE value="adding java literal" />
     <MESSAGE value="adding type conversion and type casting in java" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding type conversion and type casting in java" />
+    <MESSAGE value="operator in java" />
+    <option name="LAST_COMMIT_MESSAGE" value="operator in java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

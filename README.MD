@@ -2482,4 +2482,270 @@ Read it as:
 
 ---
 
+## Conditional statement in java
+![conditional statement img](img/conditonal_img.webp);
+
+---
+🧠 Decision Making in Java (Conditional Statements)
+
+
+Decision making in programming is similar to real-life decision making.
+We often want certain code to run only when a condition is true.
+
+👉 In Java, this is done using conditional (decision-making) statements, which control the flow of execution of a program.
+
+🔹 Types of Decision-Making Statements in Java
+
+Java provides the following decision-making constructs:
+
+- if statement
+
+- if-else statement
+
+- nested if statement
+
+- if-else-if ladder
+
+- switch statement
+
+- Ternary operator (?:)
+
+1️⃣ if Statement
+
+The if statement is the simplest decision-making statement.
+
+👉 It executes a block of code only if the condition is true.
+
+Syntax
+````
+if (condition) {
+// code executes if condition is true
+}
+Example
+class A {
+public static void main(String args[]) {
+int i = 10;
+
+        if (i < 15) {
+            System.out.println("Condition is True");
+        }
+    }
+}
+
+````
+Output
+Condition is True
+📌 Important Notes
+
+The condition must return true or false
+
+If {} are omitted, only the next line belongs to if
+
+if (i < 15)
+System.out.println("True");
+System.out.println("Always runs"); // not part of if
+2️⃣ if-else Statement
+
+The if-else statement allows you to execute:
+
+one block if the condition is true
+
+another block if the condition is false
+
+Syntax
+````
+if (condition) {
+// true block
+} else {
+// false block
+}
+````
+Example
+
+````
+class A {
+public static void main(String args[]) {
+int i = 10;
+
+        if (i < 15)
+            System.out.println("i is smaller than 15");
+        else
+            System.out.println("i is greater than 15");
+    }
+}
+
+````
+Output
+i is smaller than 15
+3️⃣ Nested if Statement
+
+A nested if is an if statement inside another if.
+
+👉 Used when one condition depends on another.
+
+Example
+````
+class A{
+public static void main(String args[]) {
+int i = 10;
+
+        if (i < 15) {
+            System.out.println("i is smaller than 15");
+
+            if (i == 10) {
+                System.out.println("i is exactly 10");
+            }
+        }
+    }
+}
+````
+Output
+i is smaller than 15
+i is exactly 10
+
+📌 Inner if executes only if outer if is true
+
+4️⃣ if-else-if Ladder
+
+Used when multiple conditions need to be checked one by one.
+
+👉 As soon as one condition becomes true, the rest are skipped.
+
+Syntax
+if (condition1) {
+// code
+} else if (condition2) {
+// code
+} else {
+// default code
+}
+Example
+````
+class B{
+public static void main(String args[]) {
+int i = 20;
+
+        if (i == 10)
+            System.out.println("i is 10");
+        else if (i == 15)
+            System.out.println("i is 15");
+        else if (i == 20)
+            System.out.println("i is 20");
+        else
+            System.out.println("i is not present");
+    }
+}
+````
+Output
+i is 20
+
+📌 Conditions are checked top to bottom
+
+5️⃣ switch Statement
+
+The switch statement is a multi-way decision statement.
+
+👉 It selects execution paths based on the value of a variable or expression.
+
+Syntax
+switch (expression) {
+case value1:
+// code
+break;
+case value2:
+// code
+break;
+default:
+// code
+}
+Example
+````
+class  A{
+public static void main(String[] args) {
+int num = 20;
+
+        switch (num) {
+            case 5:
+                System.out.println("It is 5");
+                break;
+            case 10:
+                System.out.println("It is 10");
+                break;
+            case 15:
+                System.out.println("It is 15");
+                break;
+            case 20:
+                System.out.println("It is 20");
+                break;
+            default:
+                System.out.println("Not present");
+        }
+    }
+}
+````
+Output
+It is 20
+📌 Important Points about switch
+
+Expression types allowed:
+
+byte, short, int, char
+
+enum
+
+String (from Java 7)
+
+break prevents fall-through
+
+default is optional
+
+Duplicate case values are not allowed
+
+6️⃣ Ternary Operator (?:)
+
+The ternary operator is a short-hand replacement for simple if-else.
+
+Syntax
+condition ? expression_if_true : expression_if_false;
+Example
+`````
+class A {
+public static void main(String args[]) {
+int a = 10, b = 20;
+
+        int max = (a > b) ? a : b;
+        System.out.println("Maximum is " + max);
+    }
+}
+`````
+Output
+Maximum is 20
+
+📌 Best used for simple conditions, not complex logic.
+
+🧠 When to Use What?
+
+Situation	Use
+Single condition	if
+Two choices	if-else
+Dependent conditions	Nested if
+Multiple comparisons	if-else-if
+Fixed values	switch
+Simple assignment decision	Ternary ?:
+🎯 Interview & Exam Tips
+
+**Conditions must return boolean**
+
+Use switch for cleaner code when checking constant values
+
+Avoid deep nested if → reduces readability
+
+Ternary is an expression, not a statement
+
+Always use {} for clarity (best practice)
+
+✅ One-Line Summary
+
+Decision-making statements in Java control the flow of execution based on conditions using if, else, switch, and the ternary operator.
+
 
