@@ -2749,3 +2749,242 @@ Always use {} for clarity (best practice)
 Decision-making statements in Java control the flow of execution based on conditions using if, else, switch, and the ternary operator.
 
 
+----
+
+# Java Loops
+
+
+Loops in programming allow a block of code to execute repeatedly based on a condition.  
+In Java, loops are mainly used to reduce code duplication and perform repetitive tasks efficiently.
+
+Java provides **four types of loops**:
+1. `for` loop
+2. Enhanced `for` loop (for-each)
+3. `while` loop
+4. `do-while` loop
+
+---
+
+## 1. `for` Loop
+
+The `for` loop is used when the **number of iterations is known in advance**.  
+It combines initialization, condition checking, and increment/decrement in a single line.
+
+### Syntax
+```java
+for (initialization; condition; increment/decrement) {
+    // code to be executed
+}
+Example
+// Java program to demonstrate for loop
+class A {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+````
+- Output: 
+0 1 2 3 4 5 6 7 8 9 10;
+
+Working of for Loop
+
+**Initialization**: Initializes the loop variable.
+
+**Condition Checking**: Checked before each iteration.
+
+**Execution:** Loop body runs if condition is true.
+
+**Increment/Decrement:** Updates loop variable.
+
+**Termination:** Loop ends when condition becomes false.
+
+for loop is an Entry-Controlled Loop.
+
+**1.1 Enhanced for Loop (for-each)**
+
+Used to iterate over arrays or collections without using indexes.
+
+Syntax
+for (dataType variable : arrayOrCollection) {
+    // code to be executed
+}
+Example
+````
+class A {
+    public static void main(String[] args) {
+        String[] names = {"Sweta", "Gudly", "Amiya"};
+
+        for (String name : names) {
+            System.out.println("Name: " + name);
+        }
+    }
+}
+````
+Output:
+Name: Sweta
+Name: Gudly
+Name: Amiya
+
+**2. while Loop**
+
+The while loop checks the condition before executing the loop body.
+Used when the number of iterations is not fixed.
+````
+Syntax
+while (condition) {
+    // code to be executed
+}
+````
+Example
+````
+class A {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
+        }
+    }
+}
+````
+- Output
+0 1 2 3 4 5 6 7 8 9 10
+
+while loop is an Entry-Controlled Loop.
+
+**3. do-while Loop**
+
+The do-while loop executes at least once, even if the condition is false.
+
+Syntax
+do {
+    // code to be executed
+} while (condition);
+Example
+````
+class A {
+    public static void main(String[] args) {
+        int i = 0;
+        do {
+            System.out.print(i + " ");
+            i++;
+        } while (i <= 10);
+    }
+}
+````
+Output
+0 1 2 3 4 5 6 7 8 9 10
+
+do-while loop is an Exit-Controlled Loop.
+----
+**Common Loop Mistakes and How to Avoid Them**
+**1. Infinite Loops**
+
+Occurs when the loop condition never becomes false.
+
+Example
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i--) {
+            System.out.println("This loop will run forever");
+        }
+    }
+}
+````
+**2. Off-by-One Errors**
+
+Occurs when a loop runs one extra or one fewer time.
+
+Example
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 5; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+````
+**3. Modifying Loop Variable Inside Loop**
+
+Changing loop variables inside the loop can cause unexpected behavior.
+
+Example
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            if (i == 2) {
+                i++;
+            }
+            System.out.println(i);
+        }
+    }
+}
+````
+----
+**4. Empty Loop Body**
+
+A loop that performs no operation.
+
+Example
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            // Empty loop body
+        }
+    }
+}
+````
+----
+
+## Additional Important Concepts
+**break Statement**
+
+Used to terminate the loop immediately.
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) break;
+            System.out.println(i);
+        }
+    }
+}
+````
+----
+**continue Statement**
+
+Skips the current iteration and continues with the next one.
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) continue;
+            System.out.println(i);
+        }
+    }
+}
+````
+----
+**Nested Loops**
+
+A loop inside another loop.
+````
+class A {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+````
+----
+
