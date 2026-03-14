@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="Conditional Statement in java">
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="Looping  Statement in java">
       <change afterPath="$PROJECT_DIR$/src/Looping_Statement/ForLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Looping_Statement/WhileLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Looping_Statement/do_While_Loop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +48,10 @@
     "Application.Relational.executor": "Run",
     "Application.SwitchStatement.executor": "Run",
     "Application.Unary.executor": "Run",
+    "Application.WhileLoop.executor": "Run",
     "Application.byteExample.executor": "Run",
     "Application.charExample.executor": "Run",
+    "Application.do_While_Loop.executor": "Run",
     "Application.if_else.executor": "Run",
     "Application.nested_If_Else.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -144,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773161597997</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Looping  Statement in java">
+      <option name="closed" value="true" />
+      <created>1773164597061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773164597062</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,7 +171,8 @@
     <MESSAGE value="adding type conversion and type casting in java" />
     <MESSAGE value="operator in java" />
     <MESSAGE value="Conditional Statement in java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conditional Statement in java" />
+    <MESSAGE value="Looping  Statement in java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Looping  Statement in java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

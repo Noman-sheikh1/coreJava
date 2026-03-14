@@ -2988,3 +2988,331 @@ class A {
 ````
 ----
 
+# 📘 Methods in Java
+
+This document explains **everything about methods in Java**, starting from **absolute basics** to **advanced concepts**.  
+
+---
+
+## 🔹 What is a Method?
+
+A **method** is a block of code that:
+- Performs a specific task
+- Executes only when it is called
+- Helps in code reuse and modular programming
+
+📌 **Simple definition:**  
+> A method is a function written inside a class.
+
+---
+
+## 🔹 Why Do We Need Methods?
+
+Without methods:
+- Code becomes lengthy
+- Same code is repeated
+- Debugging becomes difficult
+
+With methods:
+- ✔ Code reuse
+- ✔ Clean structure
+- ✔ Easy maintenance
+- ✔ Better readability
+
+---
+
+## 1️⃣ Method Declaration
+
+### General Syntax
+```java
+accessModifier returnType methodName(parameters) {
+    // method body
+}
+````
+
+### Example
+
+```java
+public static void sayHello() {
+    System.out.println("Hello Java");
+}
+```
+
+### Explanation
+
+| Part       | Description      |
+| ---------- | ---------------- |
+| `public`   | Access level     |
+| `static`   | Belongs to class |
+| `void`     | No return value  |
+| `sayHello` | Method name      |
+| `()`       | Parameters       |
+| `{}`       | Method body      |
+
+---
+
+## 2️⃣ Method Calling
+
+A method **does nothing unless it is called**.
+
+```java
+public class Main {
+    static void greet() {
+        System.out.println("Welcome!");
+    }
+
+    public static void main(String[] args) {
+        greet(); // method call
+    }
+}
+```
+
+📌 Program execution always starts from `main()`.
+
+---
+
+## 3️⃣ Parameters in Methods
+
+Parameters allow passing data to a method.
+
+```java
+static void add(int a, int b) {
+    System.out.println(a + b);
+}
+```
+
+Calling:
+
+```java
+add(5, 3); // Output: 8
+```
+
+### Types of Parameters
+
+* Primitive types: `int`, `double`, `char`
+* Reference types: `String`, arrays, objects
+
+---
+
+## 4️⃣ Return Types
+
+A method can return a value using `return`.
+
+```java
+static int square(int x) {
+    return x * x;
+}
+```
+
+Usage:
+
+```java
+int result = square(5);
+System.out.println(result); // 25
+```
+
+📌 Rules:
+
+* `void` methods do not return values
+* Returned value must match return type
+* Code after `return` will not execute
+
+---
+
+## 5️⃣ Method Overloading
+
+### Definition
+
+Method overloading means:
+
+* Same method name
+* Different parameter list
+* Same class
+
+### Example
+
+```java
+static int add(int a, int b) {
+    return a + b;
+}
+
+static double add(double a, double b) {
+    return a + b;
+}
+```
+
+### Invalid Overloading
+
+```java
+int add(int a, int b)
+double add(int a, int b) // ❌ Not allowed
+```
+
+(Return type alone cannot differentiate methods)
+
+---
+
+## 6️⃣ Recursion
+
+### Definition
+
+Recursion is when a method calls itself.
+
+### Example (Factorial)
+
+```java
+static int fact(int n) {
+    if (n == 0)
+        return 1;
+    return n * fact(n - 1);
+}
+```
+
+📌 Important:
+
+* Must have a base condition
+* Otherwise leads to `StackOverflowError`
+
+---
+
+## 7️⃣ Types of Methods
+
+### 1. Static Method
+
+* Belongs to class
+* No object required
+
+```java
+static void show() {}
+```
+
+---
+
+### 2. Instance Method
+
+* Belongs to object
+* Requires object creation
+
+```java
+void display() {}
+
+Main obj = new Main();
+obj.display();
+```
+
+---
+
+## 8️⃣ Access Modifiers in Methods
+
+| Modifier    | Access Level            |
+| ----------- | ----------------------- |
+| `public`    | Anywhere                |
+| `protected` | Same package / subclass |
+| default     | Same package            |
+| `private`   | Same class only         |
+
+---
+
+## 9️⃣ Call by Value in Java
+
+Java always uses **call by value**.
+
+```java
+static void change(int x) {
+    x = 50;
+}
+
+public static void main(String[] args) {
+    int a = 10;
+    change(a);
+    System.out.println(a); // 10
+}
+```
+
+📌 The original variable is not modified.
+
+---
+
+## 🔟 Method vs Constructor
+
+| Method                   | Constructor          |
+| ------------------------ | -------------------- |
+| Has return type          | No return type       |
+| Can be called explicitly | Called automatically |
+| Performs action          | Initializes object   |
+
+---
+
+## 1️⃣1️⃣ Varargs (Variable Arguments)
+
+Allows passing multiple arguments.
+
+```java
+static int sum(int... nums) {
+    int total = 0;
+    for(int n : nums)
+        total += n;
+    return total;
+}
+```
+
+Call:
+
+```java
+sum(1, 2, 3, 4);
+```
+
+---
+
+## 1️⃣2️⃣ Method Hiding (Static Methods)
+
+```java
+class A {
+    static void show() {}
+}
+
+class B extends A {
+    static void show() {}
+}
+```
+
+📌 Static methods are hidden, not overridden.
+
+---
+
+## 1️⃣3️⃣ Overloading vs Overriding
+
+| Overloading          | Overriding           |
+| -------------------- | -------------------- |
+| Same class           | Parent-child classes |
+| Compile-time         | Runtime              |
+| Different parameters | Same signature       |
+
+---
+
+## 1️⃣4️⃣ Real-Life Example
+
+```java
+class ATM {
+    static void withdraw(int amount) {
+        System.out.println("Withdrawn: " + amount);
+    }
+}
+```
+
+* Class → Machine
+* Method → Action
+
+---
+
+## 1️⃣5️⃣ Best Practices
+
+* Use meaningful method names
+* One method should do one task
+* Avoid very long methods
+* Follow camelCase naming
+* Add comments where needed
+
+---
+
+
