@@ -793,8 +793,8 @@ Hello World
 Example:
 
 ```java
-System.out.print("Hello");
-System.out.print("World");
+  System.out.print("Hello");
+  System.out.print("World");
 ```
 
 Output:
@@ -5208,6 +5208,281 @@ private → default → protected → public
 ## 🎯 Interview One-Liner
 
 > Access modifiers in Java control the visibility of classes and their members to enforce encapsulation, security, and proper design.
+
+---
+
+
+# 🖥️ Command Line Arguments in Java (Complete Guide)
+
+**Last Updated:** 10 Aug, 2025
+
+Command Line Arguments in Java allow us to **pass data to a program at runtime** when the program is executed from the command line (terminal/console).
+
+These arguments are received by the program through the `main` method.
+
+---
+
+## 📌 What Are Command Line Arguments?
+
+> Command line arguments are **values passed to a Java program when it starts running**, instead of taking input during execution.
+
+They are passed **after the class name** while running the program.
+
+---
+
+## 📍 Syntax
+
+```bash
+java ClassName arg1 arg2 arg3 ...
+```
+
+Example:
+
+```bash
+java HelloWorld Hello Java
+```
+
+Here:
+
+* `Hello`
+* `Java`
+
+are **command line arguments**
+
+---
+
+## 🧠 How Java Receives Command Line Arguments
+
+The `main` method in Java is defined as:
+
+```java
+public static void main(String[] args)
+```
+
+* `args` is an **array of String**
+* JVM stores all command line arguments inside this array
+* Arguments are stored as:
+
+    * `args[0]`
+    * `args[1]`
+    * `args[2]` …
+
+---
+
+## 🧪 Simple Example: Print First Argument
+
+```java
+class Demo {
+    public static void main(String[] args) {
+
+        System.out.println(args[0]);
+    }
+}
+```
+
+### ▶ Run
+
+```bash
+java Demo Hello
+```
+
+### 🖨 Output
+
+```
+Hello
+```
+
+---
+
+## ⚠️ Important Note (Very Common Mistake)
+
+If you run the program **without arguments**:
+
+```bash
+java Demo
+```
+
+Then this line:
+
+```java
+System.out.println(args[0]);
+```
+
+❌ will throw:
+
+```
+ArrayIndexOutOfBoundsException
+```
+
+Why?
+
+* Because `args` is empty
+* There is no element at index `0`
+
+---
+
+## ✅ Safe Way: Check Arguments Length
+
+```java
+class Demo {
+    public static void main(String[] args) {
+
+        if (args.length > 0) {
+            System.out.println(args[0]);
+        } else {
+            System.out.println("No command line arguments found.");
+        }
+    }
+}
+```
+
+---
+
+## 🔁 Example: Print All Command Line Arguments
+
+```java
+class Demo {
+    public static void main(String[] args) {
+
+        if (args.length > 0) {
+            System.out.println("Command line arguments are:");
+
+            for (String value : args) {
+                System.out.println(value);
+            }
+        } else {
+            System.out.println("No command line arguments found.");
+        }
+    }
+}
+```
+
+### ▶ Run
+
+```bash
+java Demo Java is powerful
+```
+
+### 🖨 Output
+
+```
+Command line arguments are:
+Java
+is
+powerful
+```
+
+---
+
+## 📌 Important Observations
+
+✔ Arguments are **space-separated**
+✔ All arguments are received as **String**
+✔ Numbers must be **converted manually**
+✔ Use `args.length` to avoid errors
+
+---
+
+## 🔢 Example: Passing Numbers as Arguments
+
+```java
+class Sum {
+    public static void main(String[] args) {
+
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+
+        System.out.println("Sum = " + (a + b));
+    }
+}
+```
+
+### ▶ Run
+
+```bash
+java Sum 10 20
+```
+
+### 🖨 Output
+
+```
+Sum = 30
+```
+
+---
+
+## ❓ Why Are Command Line Arguments Always Strings?
+
+Because:
+
+* JVM reads input from **command line as text**
+* JVM does not know the data type in advance
+* Programmer decides how to convert the data
+
+---
+
+## 🧠 Why Use Command Line Arguments?
+
+✔ No need to modify code for new inputs
+✔ Useful for **automation & scripting**
+✔ Common in **real-world applications**
+✔ Used in **servers, tools, batch jobs**
+
+---
+
+## 🏗️ Real-World Use Cases
+
+* Passing **file paths**
+* Passing **configuration values**
+* Passing **usernames / flags**
+* Running programs in **CI/CD pipelines**
+* Starting servers with custom ports
+
+Example:
+
+```bash
+java ServerApp 8080 production
+```
+
+---
+
+## 🧾 Compilation & Execution Steps
+
+1️⃣ Save file as `Hello.java`
+2️⃣ Compile:
+
+```bash
+javac Hello.java
+```
+
+3️⃣ Run with arguments:
+
+```bash
+java Hello Java World
+```
+
+---
+
+## 🚨 Common Mistakes
+
+❌ Not checking `args.length`
+❌ Assuming args are integers
+❌ Accessing invalid index
+❌ Forgetting space separation
+
+---
+
+## 🧪 Interview Question (Very Common)
+
+### Q: Why is `main` method argument a `String[]`?
+
+**Answer:**
+Because command line inputs are passed as text by the operating system, and Java receives them as an array of strings so the programmer can decide how to use or convert them.
+
+---
+## 📌 One-Line Definition
+
+> Command line arguments in Java allow passing input to a program at runtime through the main method as a String array.
 
 ---
 
