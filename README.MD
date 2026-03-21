@@ -1167,7 +1167,7 @@ Examples:
 * Class
 * Object
 * Interface
-* Array
+* array
 
 ---
 
@@ -1194,7 +1194,7 @@ Strings in Java are **immutable**, meaning they **cannot be changed after creati
 
 ---
 
-# Array
+# array
 
 An **array** stores multiple values of the same type.
 
@@ -1265,7 +1265,7 @@ Non-Primitive Data Types:
 * Class
 * Object
 * Interface
-* Array
+* array
 
 Important things to remember:
 
@@ -5788,9 +5788,9 @@ nums[0]
 
 ---
 
-## 1️⃣4️⃣ Varargs vs Array
+## 1️⃣4️⃣ Varargs vs array
 
-| Feature     | Array     | Varargs |
+| Feature     | array     | Varargs |
 | ----------- | --------- | ------- |
 | Syntax      | Hard      | Simple  |
 | Readability | Low       | High    |
@@ -5836,6 +5836,650 @@ nums[0]
 > Varargs in Java allow a method to accept a variable number of arguments, which are internally treated as an array.
 
 ---
+
+# 📌 Arrays in Java
+---
+
+## 1️⃣ What is an array in Java?
+
+An **array** is a data structure that stores **multiple values of the same data type** under a single variable name.  
+These values are stored in **contiguous memory locations** and accessed using **index numbers**.
+
+### Why do we need Arrays?
+
+Without arrays:
+
+1. int a = 10;
+2. int b = 20;
+3. int c = 30;
+
+With arrays:
+
+int[] arr = {10, 20, 30};
+
+1. ✔ Cleaner code
+2. ✔ Easier data management
+3. ✔ Faster access
+
+---
+
+## 2️⃣ Key Characteristics of Arrays
+* Stores same data type elements
+* Memory is contiguous
+* Index starts from 0
+* Fixed size after creation
+* Can store primitive values and objects
+* Arrays are objects in Java
+* Memory is allocated on the Heap
+
+---- 
+
+## 3️⃣ Types of Arrays in Java
+✅ Primitive Type Arrays
+
+They store actual values directly.
+
+* int[] numbers = {10, 20, 30};
+* char[] letters = {'A', 'B', 'C'};
+* boolean[] flags = {true, false};
+
+📌 Values are stored directly in memory.
+
+---
+
+## ✅ Non-Primitive (Object) Arrays
+
+They store references to objects, not the objects themselves.
+
+String[] names = {"Aman", "Rahul", "Pankaj"};
+
+📌 References are contiguous, actual objects are stored separately in heap.
+
+--- 
+## 4️⃣ array Indexing (VERY IMPORTANT)
+* Index always starts from 0
+* Last index = length - 1
+
+Example:
+
+int[] arr = {10, 20, 30, 40};
+
+| Index | Value | 
+|-------|------| 
+| 0     | 10   | 
+| 1     | 20   | 
+| 2     | 30   |    
+| 3     | 40   | 
+
+---
+
+## 5️⃣ Declaring an array
+
+Two valid syntaxes:
+
+int[] arr;   // Recommended
+
+int arr[];
+Industry standard: dataType[] variableName
+
+--- 
+
+
+
+## 6️⃣ Creating (Allocating) an array
+
+> **Declaration does not allocate memory**
+
+```java
+int[] arr = new int[5];
+```
+
+### 🔹 Default Values After Allocation
+
+| Data Type | Default Value |
+| --------- | ------------- |
+| int       | 0             |
+| double    | 0.0           |
+| boolean   | false         |
+| Object    | null          |
+
+---
+
+## 7️⃣ Initializing an array
+
+### ✅ Method 1: Using `new`
+
+```java
+int[] arr = new int[3];
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+```
+
+### ✅ Method 2: array Literal (Most Common)
+
+```java
+int[] arr = {1, 2, 3};
+```
+
+✔ Clean
+✔ No `new` keyword required
+
+### ✅ Method 3: Anonymous array
+
+```java
+calculateSum(new int[]{1, 2, 3});
+```
+
+---
+
+## 8️⃣ Accessing array Elements
+
+```java
+int[] arr = {2, 4, 8, 12, 16};
+
+System.out.println(arr[3]); // 12
+System.out.println(arr[0]); // 2
+```
+
+📌 Index must be valid.
+
+---
+
+## 9️⃣ Updating array Elements
+
+```java
+int[] arr = {2, 4, 8, 12, 16};
+
+arr[0] = 90;
+System.out.println(arr[0]); // 90
+```
+
+---
+
+## 🔟 Traversing an array
+
+### 🔹 Using `for` loop
+
+```java
+for (int i = 0; i < arr.length; i++) {
+    System.out.print(arr[i] + " ");
+}
+```
+
+### 🔹 Using `for-each` loop
+
+```java
+for (int x : arr) {
+    System.out.print(x + " ");
+}
+```
+
+---
+
+## 1️⃣1️⃣ Size of an array
+
+Java provides a **property**, not a method.
+
+```java
+arr.length
+```
+
+❌ `arr.length()`
+✅ `arr.length`
+
+---
+
+## 1️⃣2️⃣ Arrays of Objects
+
+Arrays can store **object references**.
+
+```java
+class Student {
+    int rollNo;
+    String name;
+
+    Student(int rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+}
+
+Student[] students = new Student[5];
+students[0] = new Student(1, "Aman");
+students[1] = new Student(2, "Vaibhav");
+students[2] = new Student(3, "Shikar");
+students[3] = new Student(4, "Dharmesh");
+students[4] = new Student(5, "Mohit");
+```
+
+📌 array stores **references**, not actual objects.
+
+---
+
+## 1️⃣3️⃣ Accessing Object array Elements
+
+```java
+System.out.println(students[0].name);
+System.out.println(students[1].rollNo);
+```
+
+---
+
+## 1️⃣4️⃣ ArrayIndexOutOfBoundsException
+
+Occurs when index is invalid.
+
+```java
+int[] arr = new int[4];
+System.out.println(arr[5]); // Runtime Error
+```
+
+📌 Valid range:
+
+```
+0 ≤ index ≤ length - 1
+```
+
+---
+
+## 1️⃣5️⃣ Passing Arrays to Methods
+
+Arrays are passed by **reference copy**.
+
+```java
+static void sum(int[] arr) {
+    int total = 0;
+    for (int x : arr)
+        total += x;
+    System.out.println(total);
+}
+
+int[] arr = {3, 1, 2, 5, 4};
+sum(arr);
+```
+
+✔ Changes affect original array.
+
+---
+
+## 1️⃣6️⃣ Returning Arrays from Methods
+
+```java
+static int[] createArray() {
+    return new int[]{1, 2, 3};
+}
+```
+
+---
+
+## 1️⃣7️⃣ Advantages of Arrays
+
+* ⚡ Fast access → **O(1)**
+* Simple structure
+* Predictable memory usage
+* Ideal for fixed-size data
+
+---
+
+## 1️⃣8️⃣ Disadvantages of Arrays
+
+* ❌ Fixed size
+* ❌ Cannot grow/shrink
+* ❌ Costly insertion/deletion
+* ❌ Same data type only
+
+📌 Use **ArrayList** for dynamic size.
+
+---
+
+## 1️⃣9️⃣ array vs ArrayList
+
+| Feature    | array     | ArrayList       |
+| ---------- | --------- | --------------- |
+| Size       | Fixed     | Dynamic         |
+| Speed      | Faster    | Slightly slower |
+| Memory     | Less      | More            |
+| Primitives | Supported | Not directly    |
+
+---
+
+## 2️⃣0️⃣ Arrays and Varargs (IMPORTANT)
+
+Varargs internally use arrays.
+
+```java
+static void demo(int... nums) {
+    // nums is actually int[]
+}
+```
+
+### Call:
+
+```java
+demo(1, 2, 3);
+```
+
+### Internally:
+
+```java
+demo(new int[]{1, 2, 3});
+```
+
+📌 Understanding arrays = understanding varargs.
+
+---
+
+## 2️⃣1️⃣ Common Mistakes
+
+❌ Invalid index
+❌ Forgetting fixed size
+❌ Using `length()` instead of `length`
+❌ Assuming object arrays store objects directly
+
+---
+
+## 🧠 One-Line Exam Definition
+
+> **An array in Java is a fixed-size data structure that stores elements of the same data type in contiguous memory locations and allows access using index values.**
+
+---
+## Taking input at run time:
+
+# 📘 PART 1: SCANNER — DETAILED & EASY
+
+## 🔹 What is Scanner?
+
+`Scanner` is a Java class used to **take input from the user at runtime**.
+
+👉 It can directly read:
+
+* numbers
+* words
+* strings
+* booleans
+
+👉 It **automatically converts input** to required data type.
+
+---
+
+## 🔹 How Scanner Works (Simple Words)
+
+Think of Scanner as:
+
+> “A helper that reads input **piece by piece (token by token)**.”
+
+---
+
+## 🔹 Step-by-Step: Using Scanner
+
+### Step 1: Import Scanner
+
+```java
+import java.util.Scanner;
+```
+
+---
+
+### Step 2: Create Scanner Object
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+📌 `System.in` means **keyboard input**
+
+---
+
+### Step 3: Take Input (Example)
+
+```java
+int age = sc.nextInt();   // reads number
+String name = sc.next(); // reads ONE word
+```
+
+---
+
+## 🔹 Complete Scanner Example (VERY CLEAR)
+
+```java
+import java.util.Scanner;
+
+public class ScannerExample {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter name: ");
+        String name = sc.next();
+
+        System.out.println("Age = " + age);
+        System.out.println("Name = " + name);
+
+        sc.close();
+    }
+}
+```
+
+### Input:
+
+```
+21 Rahul
+```
+
+### Output:
+
+```
+Age = 21
+Name = Rahul
+```
+
+---
+
+## 🔴 VERY IMPORTANT PART (YOUR CONFUSION)
+
+### ❌ Problem Code
+
+```java
+int n = sc.nextInt();
+String name = sc.nextLine(); // empty input
+```
+
+### 🧠 Why does this happen?
+
+Let’s see input:
+
+```
+25⏎
+Rahul⏎
+```
+
+### Step-by-step in memory:
+
+1️⃣ `sc.nextInt()`
+
+* Reads **25**
+* BUT **does NOT read Enter key (⏎)**
+
+2️⃣ Buffer now contains:
+
+```
+⏎Rahul⏎
+```
+
+3️⃣ `sc.nextLine()`
+
+* Reads **everything till next ⏎**
+* Finds **empty line**
+* Returns `""` (empty string)
+
+👉 So `name` becomes empty ❌
+
+---
+
+## ✅ CORRECT WAY (FIX)
+
+```java
+int n = sc.nextInt();
+sc.nextLine();        // clears leftover ENTER
+String name = sc.nextLine();
+```
+
+### 🧠 What `sc.nextLine()` does here?
+
+👉 It **consumes the pending Enter key**
+
+---
+
+## 🔹 When to Use Scanner?
+
+✔ Beginners
+✔ College exams
+✔ Small programs
+✔ When speed is NOT important
+
+---
+
+## 📝 Taking Different Types of Input
+
+| Data Type          | Scanner Method  |
+| ------------------ | --------------- |
+| int                | `nextInt()`     |
+| double             | `nextDouble()`  |
+| float              | `nextFloat()`   |
+| boolean            | `nextBoolean()` |
+| String (one word)  | `next()`        |
+| String (full line) | `nextLine()`    |
+
+---
+
+# 📘 PART 2: BUFFEREDREADER — DETAILED & EASY
+
+## 🔹 What is BufferedReader?
+
+`BufferedReader` is a **fast input class** used when input size is **large**.
+
+👉 It **only reads Strings**
+👉 No automatic conversion
+
+---
+
+## 🔹 How BufferedReader Works (Simple Words)
+
+Think of BufferedReader as:
+
+> “A fast reader that reads **entire line at once**.”
+
+---
+
+## 🔹 Step-by-Step: Using BufferedReader
+
+### Step 1: Import Packages
+
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+```
+
+---
+
+### Step 2: Create BufferedReader Object
+
+```java
+BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+```
+
+---
+
+### Step 3: Take Input
+
+```java
+String input = br.readLine();  // reads full line
+int num = Integer.parseInt(input);
+```
+
+---
+
+## 🔹 Complete BufferedReader Example
+
+```java
+import java.io.*;
+
+public class BufferedExample {
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br =
+            new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Enter age: ");
+        int age = Integer.parseInt(br.readLine());
+
+        System.out.print("Enter name: ");
+        String name = br.readLine();
+
+        System.out.println("Age = " + age);
+        System.out.println("Name = " + name);
+    }
+}
+```
+
+### Input:
+
+```
+21
+Rahul Sharma
+```
+
+### Output:
+
+```
+Age = 21
+Name = Rahul Sharma
+```
+
+---
+
+## 🔹 BufferedReader for Multiple Numbers
+
+```java
+String[] arr = br.readLine().split(" ");
+int a = Integer.parseInt(arr[0]);
+int b = Integer.parseInt(arr[1]);
+```
+
+---
+
+## 🔹 Scanner vs BufferedReader (SUPER SIMPLE)
+
+| Scanner           | BufferedReader     |
+| ----------------- | ------------------ |
+| Easy              | Slightly hard      |
+| Slow              | Fast               |
+| Auto conversion   | Manual conversion  |
+| Beginner friendly | Competitive coding |
+| Token-based       | Line-based         |
+
+---
+
+## 🧠 FINAL SUMMARY (REMEMBER THIS)
+
+* **Scanner** → easy, beginner, exams
+* **BufferedReader** → fast, large input, contests
+* `nextInt()` + `nextLine()` issue happens because **Enter key remains**
+* Always clear buffer when mixing inputs
+
+---
+
+
+
+
+
+
 
 
 
