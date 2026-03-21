@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="Array in java , Scanner and BufferedReader">
-      <change afterPath="$PROJECT_DIR$/src/array/TwoDimensionalArray.java" afterDir="false" />
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="Multidimensional array in java">
+      <change afterPath="$PROJECT_DIR$/src/array/ArraysClassUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     "Application.Arithmatic.executor": "Run",
     "Application.Array1.executor": "Run",
     "Application.ArrayOfObject.executor": "Run",
+    "Application.ArraysClassUtility.executor": "Run",
     "Application.Assignment.executor": "Run",
     "Application.BitwiseAndShift.executor": "Run",
     "Application.BooleandatatypeExample.executor": "Run",
@@ -48,6 +50,7 @@
     "Application.Relational.executor": "Run",
     "Application.SwitchStatement.executor": "Run",
     "Application.TakeArrayInputAtRuntime.executor": "Run",
+    "Application.TwoDimensionalArray.executor": "Run",
     "Application.Unary.executor": "Run",
     "Application.WhileLoop.executor": "Run",
     "Application.byteExample.executor": "Run",
@@ -238,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774105121201</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Multidimensional array in java">
+      <option name="closed" value="true" />
+      <created>1774105972717</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1774105972717</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,7 +273,8 @@
     <MESSAGE value="Commmand Line argument in java" />
     <MESSAGE value="varang argument in java" />
     <MESSAGE value="Array in java , Scanner and BufferedReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Array in java , Scanner and BufferedReader" />
+    <MESSAGE value="Multidimensional array in java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multidimensional array in java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
