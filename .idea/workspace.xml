@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="varang argument in java">
-      <change afterPath="$PROJECT_DIR$/src/array/Array1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/array/ArrayOfObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/array/TakeArrayInputAtRuntime.java" afterDir="false" />
+    <list default="true" id="11a970c1-d221-4437-88be-8873b8ff6312" name="Changes" comment="Array in java , Scanner and BufferedReader">
+      <change afterPath="$PROJECT_DIR$/src/array/TwoDimensionalArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774027538725</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Array in java , Scanner and BufferedReader">
+      <option name="closed" value="true" />
+      <created>1774105121201</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1774105121201</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,7 +261,8 @@
     <MESSAGE value="Access Modifiers in java" />
     <MESSAGE value="Commmand Line argument in java" />
     <MESSAGE value="varang argument in java" />
-    <option name="LAST_COMMIT_MESSAGE" value="varang argument in java" />
+    <MESSAGE value="Array in java , Scanner and BufferedReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Array in java , Scanner and BufferedReader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

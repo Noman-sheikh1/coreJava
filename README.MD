@@ -6476,6 +6476,383 @@ int b = Integer.parseInt(arr[1]);
 ---
 
 
+# 📌 Java Multi-Dimensional Arrays
+A **multi-dimensional array in Java** is an **array of arrays**.
+It allows data to be stored in **tabular form** such as **rows and columns**.
+
+✅ Commonly used for:
+
+* Matrices
+* Tables
+* Grids
+* Dynamic programming
+* Graphs and images
+
+📌 The **most commonly used** multi-dimensional array is the **2D array**.
+
+---
+
+## 🔹 Key Characteristics
+
+* Stores data in **multiple dimensions**
+* Indexing starts from **0**
+* Memory is allocated row-wise
+* Java supports **jagged arrays** (rows can have different sizes)
+
+---
+
+## 🔹 General Syntax
+
+```java
+data_type[dim1][dim2]...[dimN] array_name =
+    new data_type[size1][size2]...[sizeN];
+```
+
+### Parameters
+
+* **data_type** → Type of elements (int, double, String, etc.)
+* **dimension** → 2D, 3D, etc.
+* **array_name** → Name of the array
+* **size** → Size of each dimension
+
+---
+
+## 🔹 Examples of Declaration
+
+```java
+// Two-dimensional array
+int[][] arr2D = new int[3][5];
+
+// Three-dimensional array
+int[][][] arr3D = new int[3][5][7];
+```
+
+---
+
+## 🔹 Size Calculation
+
+📌 **Total elements = product of all dimensions**
+
+Example:
+
+```java
+int[][][] x = new int[3][5][7];
+```
+
+Total elements = `3 × 5 × 7 = 105`
+
+---
+
+# 🟦 Two-Dimensional Array (2D Array)
+
+A **2D array** represents data in **rows and columns**.
+It can be understood as an **array of 1D arrays**.
+
+---
+
+## 🔹 Syntax
+
+```java
+data_type[][] array_name = new data_type[rows][columns];
+```
+
+Accessing elements:
+
+```java
+array_name[row_index][column_index] = value;
+```
+
+---
+
+## 🔹 Conceptual Representation
+
+A 2D array behaves like a table:
+
+| Column 0 | Column 1 | Column 2 |
+| -------- | -------- | -------- |
+| Row 0    | Row 0    | Row 0    |
+| Row 1    | Row 1    | Row 1    |
+| Row 2    | Row 2    | Row 2    |
+
+📌 Index range:
+
+* Rows → `0` to `rows - 1`
+* Columns → `0` to `columns - 1`
+
+---
+
+## 🔹 Example 1: Direct Initialization
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int[][] arr = { {1, 2}, {3, 4} };
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+### Output
+
+```
+1 2
+3 4
+```
+
+---
+
+## 🔹 Example 2: Assigning Values Using Loops
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int n = 2;
+        int m = 2;
+
+        int[][] arr = new int[n][m];
+        int value = 1;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = value++;
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+---
+
+## 🔹 Accessing Elements of a 2D Array
+
+```java
+int[][] arr = { {1, 2}, {3, 4} };
+System.out.println(arr[1][1]); // 4
+```
+
+📌 `arr[i][j]`
+
+* `i` → row index
+* `j` → column index
+
+---
+
+## 🔹 2D Array with User Input (Runtime)
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter columns: ");
+        int cols = sc.nextInt();
+
+        int[][] arr = new int[rows][cols];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Array elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+```
+
+---
+
+# 🟪 Three-Dimensional Array (3D Array)
+
+A **3D array** can be understood as:
+
+> **An array of 2D arrays**
+
+Used when data has **three levels** (e.g., time × rows × columns).
+
+---
+
+## 🔹 Example 1: Direct Initialization
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int[][][] arr = {
+            { {1, 2}, {3, 4} },
+            { {5, 6}, {7, 8} }
+        };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    System.out.println(
+                        "arr[" + i + "][" + j + "][" + k + "] = " + arr[i][j][k]
+                    );
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## 🔹 Example 2: Assigning Values Using Loops
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int[][][] arr = new int[2][2][2];
+        int value = 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    arr[i][j][k] = value++;
+                }
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    System.out.print(arr[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+---
+
+## 🔹 Accessing Elements of 3D Array
+
+```java
+System.out.println(arr[0][0][0]);
+```
+
+📌 Format:
+
+```text
+array[x][row][column]
+```
+
+---
+
+# 🟨 Jagged Arrays (IMPORTANT ADDITION)
+
+In Java, **rows can have different column sizes**.
+
+```java
+int[][] arr = new int[3][];
+arr[0] = new int[2];
+arr[1] = new int[4];
+arr[2] = new int[1];
+```
+
+📌 This is **not possible in C**, but allowed in Java.
+
+---
+
+# 🟩 Runtime Insertion in Multi-Dimensional Array
+
+Example: Take 2D array input and count **even & odd numbers**.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int rows = sc.nextInt();
+        int[][] arr = new int[rows][];
+
+        for (int i = 0; i < rows; i++) {
+            int cols = sc.nextInt();
+            arr[i] = new int[cols];
+
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int even = 0, odd = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) even++;
+                else odd++;
+            }
+        }
+
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+
+        sc.close();
+    }
+}
+```
+
+---
+
+# 🧠 Applications of Multi-Dimensional Arrays
+
+* Student records (roll number, marks)
+* Matrix operations
+* Image processing (pixel matrix)
+* Dynamic Programming
+* Graphs (adjacency matrix)
+* Game boards (chess, sudoku)
+* Grid-based problems
+
+---
+
+# 🧠 Exam One-Line Definition
+
+> **A multi-dimensional array in Java is an array of arrays used to store data in multiple dimensions such as rows and columns.**
+
+---
+
+
+
+
 
 
 
